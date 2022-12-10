@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { useState } from "react";
 import { useContext } from "react";
 import { ContextGlobal } from "../Components/utils/global.context";
-import styles from './Favs.module.css'
+import styles from './Home.module.css'
 
 const Favs = () => {
   const [storageState,setStorageState] = useState([])//uso de State para visualizar de inmediato el render al remover una card en favs
@@ -15,9 +15,9 @@ const Favs = () => {
   },[])
 
   return (
-    <main className={theme === "dark" ? styles.favs + " dark": styles.favs} >
+    <main className={theme === "dark" ? styles.favs + " dark "+ styles.dark: styles.favs} >
       <h1>Favs Dentists </h1>
-      <div className="card-grid">
+      <div className={styles["card-grid"]}>
         {storageState!= null && storageState.length !=0 && storageState?.map((element)=>{
           return(
             <Link key={element.id} to={`/dentist/${element.id}`}> 

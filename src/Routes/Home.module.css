@@ -1,0 +1,72 @@
+.favs{
+    height: 100%;
+}
+
+.favButton{
+    background-color: rgba(136, 136, 136, 0.116);
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    width: 70%;
+  }
+
+.favButton:hover{
+background-color: beige;
+}
+
+.card{
+display: flex;
+justify-content: space-around;
+flex-direction: column;
+align-items: center;
+width: 100%;
+padding: 0.5rem 0.5rem 0 0.5rem;
+border: 0.5px solid rgb(136, 136, 136);
+border-radius: 8px;
+height: 23rem;
+}
+.card > img{
+border-radius: 8px;
+max-width: 90%;
+
+}
+.card > h3, .card > p{
+margin: 0;
+
+}
+
+.card:hover{
+border: 0.5px solid rgb(185, 185, 65);
+
+}
+
+.card-grid{
+display: flex;
+justify-content: flex-start;
+gap: 1rem;
+width: 90vw;
+height: auto;
+flex-wrap: wrap;
+margin: 0 auto;
+}
+
+.dark .card {
+background-color: rgb(49, 48, 48);
+border-color: rgb(255, 255, 255);
+color: white;
+}
+.dark .card:hover{
+border: 0.5px solid rgb(154, 194, 239);
+color: rgb(132, 131, 131);
+}
+.dark .card button{
+color: white;
+}
+
+.dark .card button:hover{
+background-color: rgb(181, 236, 248);
+color:  rgb(49, 48, 48);
+}
+
+
+

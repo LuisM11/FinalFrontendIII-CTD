@@ -29,4 +29,6 @@ nav > ul {
    color: white;
    background-color: rgb(49, 48, 48);
  }
-
+ .dark li > a {
+   color: white;
+ }

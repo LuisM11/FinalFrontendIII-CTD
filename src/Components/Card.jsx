@@ -1,6 +1,7 @@
 import React from "react";
 import { useCallback } from "react";
 import {useLocation } from "react-router-dom";
+import styles from '../Routes/Home.module.css'
 
 const Card = ({ name, username, id, setStorageState }) => {
   const location = useLocation()
@@ -41,7 +42,7 @@ const Card = ({ name, username, id, setStorageState }) => {
   
 
   return (
-    <div className="card">
+    <div className={styles.card}>
       <img
           src="/images/doctor.jpg"
           alt="doctor placeholder"
@@ -49,7 +50,7 @@ const Card = ({ name, username, id, setStorageState }) => {
         <h3> {name} </h3>
         <p>{`ID: #${id}`} </p>
         <p> {`Username: ${username}`}</p>
-        <button onClick={location.pathname === '/home' ? addFav:removeFav} className="favButton">
+        <button onClick={location.pathname === '/home' ? addFav:removeFav} className={styles.favButton}>
           {location.pathname === '/home' ? 'Add to Favs':'Remove'}
         </button>
     </div>
