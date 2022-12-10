@@ -1,0 +1,62 @@
+.contact{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+.contact h2, .contact p{
+  margin: 0 auto;
+}
+
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px 20px;
+    
+    border-radius: 8px;
+    height: auto;
+    margin: 10px auto 0;
+  }
+.contactForm label{
+  margin: 7px 0
+}
+.contactForm .submit{
+  margin: 17px auto 0;
+  padding: 6px 0;
+  border-radius: 5px;
+  border: 1px gray;
+  cursor: pointer;
+  width: 50%;
+}
+.contactForm .submit:hover:disabled{
+  cursor:default;
+  background-color: #f4f4f6 ;
+}
+.contactForm .submit:hover{
+  background-color: beige;
+}
+  
+.contact span{
+  margin: 0 auto;
+}
+.success{
+  color: rgb(87, 212, 93);
+  font-weight: bold;
+}
+.fail{
+  color:rgb(164, 49, 49);
+  font-weight: bold;
+}
+
+.dark .submit{
+  background-color: rgb(49, 48, 48);
+  color: white;
+}
+.dark .submit:hover{
+  background-color: rgb(181, 236, 248);
+  color: black;
+}
+
+
+

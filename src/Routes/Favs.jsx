@@ -1,18 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "../Components/Card";
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+import { Link } from 'react-router-dom'
+import { useState } from "react";
+import { useContext } from "react";
+import { ContextGlobal } from "../Components/utils/global.context";
+import styles from './Favs.module.css'
 
 const Favs = () => {
+  const [storageState,setStorageState] = useState([])//uso de State para visualizar de inmediato el render al remover una card en favs
+  const {theme} = useContext(ContextGlobal)
+  useEffect( ()=>{
+    setStorageState( JSON.parse(localStorage.getItem('favs')) )
+
+  },[])
 
   return (
-    <>
-      <h1>Dentists Favs</h1>
+    <main className={theme === "dark" ? styles.favs + " dark": styles.favs} >
+      <h1>Favs Dentists </h1>
       <div className="card-grid">
-        {/* este componente debe consumir los destacados del localStorage */}
-        {/* Deberan renderizar una Card por cada uno de ellos */}
+        {storageState!= null && storageState.length !=0 && storageState?.map((element)=>{
+          return(
+            <Link key={element.id} to={`/dentist/${element.id}`}> 
+            <Card  id={ element.id} name={element.name} username={element.username} setStorageState={setStorageState}/>
+            </Link>
+          )
+        }) }
+
       </div>
-    </>
+    </main>
   );
 };
 

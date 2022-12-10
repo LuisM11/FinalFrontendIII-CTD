@@ -1,0 +1,32 @@
+header{
+   display: flex;
+   justify-content: center;
+   width:  100%;
+}
+nav{
+    /* background-color: antiquewhite; */
+    display: flex;
+    width: 80%;
+    padding: 1rem 0rem 1rem 50%;
+    
+  }
+nav > ul {
+   display: flex;
+   list-style: none;
+   justify-content: space-around;
+   width: 100%;
+}
+
+.themeButton{
+   padding: 3px 10px;
+   border-radius: 5px;
+   border: 1px gray;
+}
+.dark .themeButton:hover{
+   color: rgb(181, 236, 248);
+}
+.dark .themeButton{
+   color: white;
+   background-color: rgb(49, 48, 48);
+ }
+
