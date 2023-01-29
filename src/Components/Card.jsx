@@ -2,6 +2,7 @@ import React from "react";
 import { useCallback } from "react";
 import {useLocation } from "react-router-dom";
 import styles from '../Routes/Home.module.css'
+import docImg from '../images/doctor.jpg'
 
 const Card = ({ name, username, id, setStorageState }) => {
   const location = useLocation()
@@ -44,7 +45,7 @@ const Card = ({ name, username, id, setStorageState }) => {
   return (
     <div className={styles.card}>
       <img
-          src="/images/doctor.jpg"
+          src={docImg}
           alt="doctor placeholder"
         />
         <h3> {name} </h3>
